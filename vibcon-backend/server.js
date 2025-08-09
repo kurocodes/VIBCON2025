@@ -9,7 +9,9 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log("Received a GET request");
+  res.send("Welcome to the Vibcon Backend!");
 });
+
 app.post("/submit-abstract", async (req, res) => {
   try {
     const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
