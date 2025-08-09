@@ -1,4 +1,7 @@
-import logo from "./images/logo.png";
+import isvib_logo from "./images/isvib_logo.png";
+import icar_logo from "./images/icar_logo.png";
+import ivri_logo from "./images/ivri_logo.png";
+import ivri_signature_logo from "./images/ivri_signature_logo.png";
 import mukteshwar_view_1 from "./images/mukteshwar_view_1.jpeg";
 import mukteshwar_view_2 from "./images/mukteshwar_view_2.jpeg";
 import mukteshwar_view_3 from "./images/mukteshwar_view_3.jpeg";
@@ -9,6 +12,11 @@ import bunglow_image_1 from "./images/bunglow_image.jpeg";
 import bunglow_image_2 from "./images/bunglow_image_2.jpeg";
 import football_ground_mukteshwar from "./images/football_ground_mukteshwar.jpeg";
 import mukteshwar_mother_campus from "./images/mukteshwar_mother_campus.jpeg";
+
+import preview_image_1 from "./images/preview_image_1.jpg";
+import preview_image_2 from "./images/preview_image_2.jpg";
+import preview_image_3 from "./images/preview_image_3.jpg";
+import preview_image_4 from "./images/preview_image_4.jpg";
 
 import nanda_devi_view from "./images/nanda_devi.jpg";
 import mukteswar_dham from "./images/mukteswar_dham.jpg";
@@ -35,7 +43,10 @@ import linkedin_icon from "./icons/linkedin.svg";
 import x_icon from "./icons/x.svg";
 
 export const images = {
-  logo,
+  isvib_logo,
+  icar_logo,
+  ivri_logo,
+  ivri_signature_logo,
   mukteshwar_view_1,
   mukteshwar_view_2,
   mukteshwar_view_3,
@@ -48,6 +59,10 @@ export const images = {
   mukteshwar_mother_campus,
   pexels_conference_image,
   pexels_team_image,
+  preview_image_1,
+  preview_image_2,
+  preview_image_3,
+  preview_image_4,
 };
 
 export const travelHighlights = [

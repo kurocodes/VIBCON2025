@@ -8,11 +8,11 @@ export default function Footer() {
     <div className="bg-[var(--color-primary)] text-[var(--color-text)] pt-10 text-center">
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 lg:gap-20 px-4 sm:px-10 md:px-30 mb-10">
         <div className="text-start">
-          <div className="flex items-center gap-4">
-            <img src={images.logo} alt="logo" className="w-30" />
-            <h3 className="text-[var(--color-accent)] text-2xl font-bold">
-              VIBCON 2025
-            </h3>
+          <div className="flex items-center gap-4 mb-2">
+            <img src={images.ivri_signature_logo} alt="logo" className="w-15" />
+            <img src={images.icar_logo} alt="logo" className="w-10" />
+            <img src={images.ivri_logo} alt="logo" className="w-10" />
+            <img src={images.isvib_logo} alt="logo" className="w-17" />
           </div>
           <p className="text-sm">
             <b>VIBCON 2025</b> is the XXX Annual Convention of <b>the Indian Society for

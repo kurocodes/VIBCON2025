@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="">
-      <Hero height="100vh" title="XXX Annual Convention" />
+      <Hero height="100vh" title="XXX Annual Convention" image={images.mukteshwar_view_1} />
       <div className="px-4 sm:px-10 lg:px-30 pb-20">
         {/* Welcome intro paragraph */}
         <div className="py-20 xl:px-10 flex max-md:flex-col gap-10 md:gap-20 justify-between items-center">
@@ -39,7 +39,7 @@ export default function Home() {
           {/* Conference Highlights Section */}
           <CTASection
             heading="Why You Shouldn't Miss This Event"
-            image={images.mukteshwar_mother_campus}
+            image={images.preview_image_3}
             listTitle={
               <>
                 <span className="text-[var(--color-accent)]">VIBCON 2025</span>{" "}

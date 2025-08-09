@@ -38,7 +38,7 @@ export default function Navbar() {
     >
       {/* Logo */}
       <div>
-        <img src={images.logo} alt="Logo" className="w-20" onClick={() => navigate("/")} />
+        <img src={images.ivri_signature_logo} alt="Logo" className="w-20" onClick={() => navigate("/")} />
       </div>
 
       {/* Navigation Links */}

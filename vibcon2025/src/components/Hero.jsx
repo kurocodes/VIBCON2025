@@ -4,7 +4,7 @@ import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
 import { useGeneralContext } from "../context/genrealContext";
 
-export default function Hero({ height, compact = false, marginTop = "mt-30", title }) {
+export default function Hero({ height, compact = false, marginTop = "mt-30", title, image }) {
   const { navigate } = useGeneralContext();
 
   const targetDate = new Date("2025-11-06T00:00:00");
@@ -39,7 +39,7 @@ export default function Hero({ height, compact = false, marginTop = "mt-30", tit
     <div
       className="relative flex text-[var(--color-text)] text-center py-5"
       style={{
-        backgroundImage: `url(${images.mukteshwar_view_1})`,
+        backgroundImage: `url(${image || images.mukteshwar_view_1})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: height || "100vh",

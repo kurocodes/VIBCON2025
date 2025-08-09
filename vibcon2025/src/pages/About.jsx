@@ -1,10 +1,8 @@
 import Hero from "../components/Hero";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import PrimaryButton from "../components/PrimaryButton";
-import {
-  aboutLists,
-  organizingCommitte,
-} from "../utils/data";
+import { aboutLists, organizingCommitte } from "../utils/data";
+import { icons, images } from "../assets/assets";
 
 export default function About() {
   return (
@@ -14,9 +12,29 @@ export default function About() {
         compact={true}
         marginTop="mt-20"
         title="VIBCON 2025"
+        image={images.preview_image_2}
       />
 
       <div className="px-4 sm:px-10 lg:px-30 py-20">
+        {/* About Images */}
+        <div className="flex flex-wrap justify-center items-center gap-4 mb-10">
+          <img
+            src={images.icar_logo}
+            alt=""
+            className="w-16 xs:w-21 sm:w-30 h-full"
+          />
+          <img
+            src={images.isvib_logo}
+            alt=""
+            className="w-35 xs:w-43 sm:w-55 h-full"
+          />
+          <img
+            src={images.ivri_logo}
+            alt=""
+            className="w-17 xs:w-23 sm:w-35 h-full"
+          />
+        </div>
+
         {/* About VIBCON and ISVIB */}
         <div className="space-y-10 text-center">
           {aboutParagraphs.map((paragraph, index) => (
@@ -28,8 +46,41 @@ export default function About() {
           ))}
         </div>
 
+        <div className="py-10">
+          <div className="flex max-md:flex-col gap-5 mt-10 bg-[var(--color-tertiary)]/30 p-4 rounded-lg">
+            <div className="group relative h-100 flex-1 hover:flex-4 shadow-lg rounded-lg overflow-hidden transition-all duration-500">
+              <img
+                src={images.preview_image_1}
+                alt=""
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="group relative h-100 flex-1 hover:flex-4 shadow-lg rounded-lg overflow-hidden transition-all duration-300">
+              <img
+                src={images.preview_image_2}
+                alt=""
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="group relative h-100 flex-1 hover:flex-4 shadow-lg rounded-lg overflow-hidden transition-all duration-300">
+              <img
+                src={images.preview_image_3}
+                alt=""
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="group relative h-100 flex-1 hover:flex-4 shadow-lg rounded-lg overflow-hidden transition-all duration-300">
+              <img
+                src={images.preview_image_4}
+                alt=""
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Conference Objectives */}
-        <div className="grid max-lg:grid-cols-1 grid-cols-3 gap-5 mt-20">
+        <div className="grid max-lg:grid-cols-1 grid-cols-3 gap-5">
           {aboutLists.map((list, index) => (
             <AboutList title={list.title} list={list.list} key={index} />
           ))}
@@ -66,9 +117,11 @@ export default function About() {
 function AboutText({ title, about }) {
   return (
     <div className="space-y-2">
-      <h2 className="text-[var(--color-secondary)] text-3xl font-bold">
-        {title}
-      </h2>
+      <div className=" flex flex-col items-center">
+        <h2 className="text-[var(--color-secondary)] text-3xl font-bold">
+          {title}
+        </h2>
+      </div>
       <p>{about}</p>
     </div>
   );
@@ -112,6 +165,21 @@ function OrganizerCard({ organizer }) {
 
 export const aboutParagraphs = [
   {
+    title: "About ISVIB",
+    about: (
+      <>
+        Established in 1990, the Indian Society of Veterinary Immunology and
+        Biotechnology (ISVIB) is a scientific society comprising experts in
+        microbiology, biotechnology, parasitology, preventive medicine,
+        reproduction, and fisheries. The society aims to promote growth in
+        veterinary science and improve animal health through gene-based
+        technologies, research, and collaboration. ISVIB hosts annual national
+        conventions and symposiums to facilitate critical discussions and
+        updates in the field.
+      </>
+    ),
+  },
+  {
     title: "About VIBCON 2025",
     about: (
       <>
@@ -124,21 +192,6 @@ export const aboutParagraphs = [
         researchers, academicians, veterinarians, policymakers, and industry
         professionals from across the globe in the serene and picturesque
         Himalayas.
-      </>
-    ),
-  },
-  {
-    title: "About ISVIB",
-    about: (
-      <>
-        Established in 1990, the Indian Society of Veterinary Immunology and
-        Biotechnology (ISVIB) is a scientific society comprising experts in
-        microbiology, biotechnology, parasitology, preventive medicine,
-        reproduction, and fisheries. The society aims to promote growth in
-        veterinary science and improve animal health through gene-based
-        technologies, research, and collaboration. ISVIB hosts annual national
-        conventions and symposiums to facilitate critical discussions and
-        updates in the field.
       </>
     ),
   },
