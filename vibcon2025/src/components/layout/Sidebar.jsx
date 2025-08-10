@@ -7,7 +7,9 @@ export default function Sidebar() {
 
   return (
     <div className="w-full xs:w-70 h-full bg-white fixed z-4 top-0 right-0">
+      {/* Sidebar header */}
       <div className="w-full flex justify-between items-center p-4 border-b-2 border-[var(--color-secondary)]">
+        {/* Social media links for small screens */}
         <div>
           <ul className="flex gap-4">
             <li className="border-2 border-[var(--color-secondary)] rounded-full">
@@ -38,12 +40,22 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
-        <button onClick={() => setShowSidebar(false)} className="cursor-pointer">
-          <img src={icons.close_icon} alt="close_icon" className="w-8 h-8 hover:scale-110 transition-transform duration-200" />
+
+        {/* Close sidebar button */}
+        <button
+          onClick={() => setShowSidebar(false)}
+          className="cursor-pointer"
+        >
+          <img
+            src={icons.close_icon}
+            alt="close_icon"
+            className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+          />
         </button>
       </div>
 
       <nav className="mt-4">
+        {/* Nav Links */}
         <ul className="flex flex-col items-center gap-6 text-[var(--color-primary)] text-md font-bold">
           <li
             className="text-[var(--color-primary)] hover:text-[var(--color-accent)]"

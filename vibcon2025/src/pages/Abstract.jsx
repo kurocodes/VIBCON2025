@@ -14,7 +14,7 @@ export default function AbstractSubmission() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (data) => {
-    setIsSubmitting(true); // Disable button
+    setIsSubmitting(true);
 
     try {
       const response = await fetch(

@@ -9,9 +9,13 @@ export default function Home() {
 
   return (
     <div className="">
-      <Hero height="100vh" title="XXX Annual Convention" image={images.mukteshwar_view_1} />
+      <Hero
+        height="100vh"
+        title="XXX Annual Convention"
+        image={images.mukteshwar_view_1}
+      />
       <div className="px-4 sm:px-10 lg:px-30 pb-20">
-        {/* Welcome intro paragraph */}
+        {/* Intro paragraph */}
         <div className="py-20 xl:px-10 flex max-md:flex-col gap-10 md:gap-20 justify-between items-center">
           <div className="min-w-80 xl:min-w-120 h-80 xl:h-120 rounded-full overflow-hidden bg-[var(--color-tertiary)]/30 p-4">
             <img
@@ -35,8 +39,9 @@ export default function Home() {
           </div>
         </div>
 
+        {/* CTA sections */}
         <div className="space-y-10">
-          {/* Conference Highlights Section */}
+          {/* Register now CTA section */}
           <CTASection
             heading="Why You Shouldn't Miss This Event"
             image={images.preview_image_3}
@@ -55,7 +60,14 @@ export default function Home() {
           <CTASection
             heading="Abstract Submission Open!"
             image={images.pexels_team_image}
-            listTitle={<>Share your <span className="text-[var(--color-accent)]">Research with the World!</span></>}
+            listTitle={
+              <>
+                Share your{" "}
+                <span className="text-[var(--color-accent)]">
+                  Research with the World!
+                </span>
+              </>
+            }
             listItems={abstractList}
             btnLabel="SUBMIT ABSTRACT"
             btnAction={() => navigate("/abstract")}
@@ -65,7 +77,14 @@ export default function Home() {
           <CTASection
             heading="Explore Mukteshwar & Plan Your Travel"
             image={images.mukteshwar_view_6}
-            listTitle={<>Make Your <span className="text-[var(--color-accent)]">Conference Trip Unforgettable!</span></>}
+            listTitle={
+              <>
+                Make Your{" "}
+                <span className="text-[var(--color-accent)]">
+                  Conference Trip Unforgettable!
+                </span>
+              </>
+            }
             listItems={travelList}
             btnLabel="PLAN YOUR TRAVEL"
             btnAction={() => navigate("/travel")}
@@ -78,14 +97,17 @@ export default function Home() {
 
 const introParagraph = (
   <>
-    <b>Welcome to VIBCON 2025</b> — an international conference hosted by <b>ICAR-IVRI
-    Mukteswar</b> in collaboration with <b>ISVIB</b>, dedicated to advancing veterinary
-    immunology and biotechnology under the theme <span className="text-[var(--color-accent)]">“Envisioning Livestock
-    Production and Protection under the One Health Landscape.”</span> Set against the
-    tranquil backdrop of the Kumaon Himalayas, this event offers a dynamic
-    platform for scientists, researchers, and professionals to exchange
-    cutting-edge ideas and solutions shaping the future of animal health and
-    productivity.
+    <b>Welcome to VIBCON 2025</b> — an international conference hosted by{" "}
+    <b>ICAR-IVRI Mukteswar</b> in collaboration with <b>ISVIB</b>, dedicated to
+    advancing veterinary immunology and biotechnology under the theme{" "}
+    <span className="text-[var(--color-accent)]">
+      “Envisioning Livestock Production and Protection under the One Health
+      Landscape.”
+    </span>{" "}
+    Set against the tranquil backdrop of the Kumaon Himalayas, this event offers
+    a dynamic platform for scientists, researchers, and professionals to
+    exchange cutting-edge ideas and solutions shaping the future of animal
+    health and productivity.
   </>
 );
 

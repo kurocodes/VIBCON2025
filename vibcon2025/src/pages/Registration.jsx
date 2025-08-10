@@ -9,6 +9,7 @@ export default function Registration() {
           <h2 className="text-[var(--color-secondary)] text-3xl font-bold text-center">
             Register online for VIBCON 2025 using the link below.
           </h2>
+          {/* Go to register form */}
           <PrimaryButton
             label="Register Now"
             action={() =>
@@ -23,7 +24,7 @@ export default function Registration() {
           />
         </div>
 
-        {/* Table */}
+        {/* Registration fee structure table */}
         <div className="space-y-8">
           <h2 className="text-[var(--color-primary)] text-2xl font-bold text-center">
             Registration Fee Structure
@@ -71,15 +72,18 @@ export default function Registration() {
           </div>
         </div>
 
-        {/*  */}
+        {/* Payment details */}
         <div className="mt-10 space-y-8">
           <h2 className="text-[var(--color-primary)] text-2xl font-bold text-center">
             Payment Instructions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {/*  */}
             <div className="bg-[var(--color-tertiary)]/30 px-4 py-2 rounded-md text-center place-content-center">
               During registration, upload proof of payment confirmation.
             </div>
+
+            {/* fee details */}
             <div className="bg-[var(--color-tertiary)]/30 px-4 py-2 rounded-md text-center place-content-center">
               <span className="text-[var(--color-secondary)]">
                 <b>Registration fee includes:</b>
@@ -90,6 +94,8 @@ export default function Registration() {
                 <li>Tea/coffee breaks, lunches, and dinner</li>
               </ul>
             </div>
+
+            {/* Bank details */}
             <div className="bg-[var(--color-tertiary)]/30 px-4 py-2 rounded-md text-center place-content-center">
               <span className="text-[var(--color-secondary)]">
                 <b>Payment through NEFT:</b>

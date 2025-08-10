@@ -16,7 +16,7 @@ export default function About() {
       />
 
       <div className="px-4 sm:px-10 lg:px-30 py-20">
-        {/* About Images */}
+        {/* Logos - ICAR, ISVIB, IVRI */}
         <div className="flex flex-wrap justify-center items-center gap-4 mb-10">
           <img
             src={images.icar_logo}
@@ -46,6 +46,7 @@ export default function About() {
           ))}
         </div>
 
+        {/* About section image gallery */}
         <div className="py-10">
           <div className="flex max-md:flex-col gap-5 mt-10 bg-[var(--color-tertiary)]/30 p-4 rounded-lg">
             <div className="group relative h-100 flex-1 hover:flex-4 shadow-lg rounded-lg overflow-hidden transition-all duration-500">
@@ -148,6 +149,7 @@ function AboutList({ title, list, index }) {
   );
 }
 
+// OrganizerCard Component - Displaying each organizer's details
 function OrganizerCard({ organizer }) {
   return (
     <div className="border border-[var(--color-secondary)] rounded-md p-4 space-y-2">

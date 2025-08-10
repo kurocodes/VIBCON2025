@@ -5,13 +5,12 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { GeneralProvider } from "./context/genrealContext.jsx";
 
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-      <BrowserRouter>
-    <GeneralProvider>
+    <BrowserRouter>
+      <GeneralProvider>
         <App />
-    </GeneralProvider>
-      </BrowserRouter>
+      </GeneralProvider>
+    </BrowserRouter>
   </StrictMode>
 );

@@ -19,16 +19,20 @@ export default function Travel() {
                 className="group relative h-100 flex-1 hover:flex-4 shadow-lg rounded-lg overflow-hidden transition-all duration-300"
                 key={index}
               >
+                {/* image */}
                 <img
                   src={highlight.image}
                   alt={highlight.name}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
+                {/* Overlay info */}
                 <div className="absolute top-0 w-full h-full bg-[var(--color-primary)]/60 text-[var(--color-text)] place-content-center flex flex-col items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-2xl font-bold text-center text-[var(--color-accent)]">
                     {highlight.name}
                   </span>
-                  <p className="text-center max-sm:px-4 px-2">{highlight.description}</p>
+                  <p className="text-center max-sm:px-4 px-2">
+                    {highlight.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -46,16 +50,20 @@ export default function Travel() {
                 className="group relative flex-1 hover:flex-5 h-100 shadow-lg rounded-lg overflow-hidden transition-all duration-300"
                 key={index}
               >
+                {/* image */}
                 <img
                   src={highlight.image}
                   alt={highlight.name}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
+                {/* Overlay info */}
                 <div className="absolute top-0 w-full h-full bg-[var(--color-primary)]/60 text-[var(--color-text)] place-content-center flex flex-col items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-2xl font-bold text-center max-xs:px-2 px-1 text-[var(--color-accent)]">
                     {highlight.name}
                   </span>
-                  <p className="text-center max-sm:px-10 px-2">{highlight.description}</p>
+                  <p className="text-center max-sm:px-10 px-2">
+                    {highlight.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -87,6 +95,7 @@ export default function Travel() {
             Travel Info
           </h2>
           <div className="grid max-sm:grid-cols-1 grid-cols-3 gap-5 mt-10 rounded-lg">
+            {/* By plane */}
             <div className="shadow-lg rounded-lg bg-[var(--color-tertiary)]/30 p-5 text-center hover:translate-y-1 hover:translate-x-1 hover:scale-105 transition-transform duration-300">
               <span className="text-3xl">✈️</span>
               <h3 className="text-xl font-semibold">By Air</h3>
@@ -101,6 +110,8 @@ export default function Travel() {
                 <span>Taxis available from both airports.</span>
               </div>
             </div>
+
+            {/* By train */}
             <div className="shadow-lg rounded-lg bg-[var(--color-tertiary)]/30 p-5 text-center hover:translate-y-1 hover:translate-x-1 hover:scale-105 transition-transform duration-300">
               <span className="text-3xl">🚉</span>
               <h3 className="text-xl font-semibold">By Rail</h3>
@@ -111,6 +122,8 @@ export default function Travel() {
                 <span>Taxis and shared cabs easily available.</span>
               </div>
             </div>
+
+            {/* By road */}
             <div className="shadow-lg rounded-lg bg-[var(--color-tertiary)]/30 p-5 text-center hover:translate-y-1 hover:translate-x-1 hover:scale-105 transition-transform duration-300">
               <span className="text-3xl">🚗</span>
               <h3 className="text-xl font-semibold">By Road</h3>
@@ -137,14 +150,16 @@ export default function Travel() {
             website).
           </p>
           <div>
-          <span className="text-[var(--color-primary)] font-bold text-lg">For More Details: </span>
-          <a
-            href="https://uttarakhandtourism.gov.in/destination/nainital"
-            target="_blank"
-            className="hover:underline whitespace-normal"
-          >
-            Visit Uttarakhand Tourism
-          </a>
+            <span className="text-[var(--color-primary)] font-bold text-lg">
+              For More Details:{" "}
+            </span>
+            <a
+              href="https://uttarakhandtourism.gov.in/destination/nainital"
+              target="_blank"
+              className="hover:underline whitespace-normal"
+            >
+              Visit Uttarakhand Tourism
+            </a>
           </div>
         </div>
       </div>
