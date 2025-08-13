@@ -1,14 +1,20 @@
 import PrimaryButton from "../components/PrimaryButton";
 import { registrationFees } from "../utils/data";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Registration() {
   return (
     <div className="pt-30 pb-10">
       <div className="px-4 sm:px-10 lg:px-30">
-        <div className="mb-10 flex flex-col items-center space-y-4">
-          <h2 className="text-[var(--color-secondary)] text-3xl font-bold text-center">
-            Register online for VIBCON 2025 using the link below.
-          </h2>
+        <div className="mb-10 flex flex-col items-center">
+          <div className="flex flex-col items-center">
+            <h2 className="text-[var(--color-secondary)] text-3xl font-bold text-center">
+              Register online for VIBCON 2025
+            </h2>
+            <span className="text-4xl text-[var(--color-secondary)] bounceY mt-2">
+              <IoIosArrowDown />
+            </span>
+          </div>
           {/* Go to register form */}
           <PrimaryButton
             label="Register Now"
@@ -77,47 +83,49 @@ export default function Registration() {
           <h2 className="text-[var(--color-primary)] text-2xl font-bold text-center">
             Payment Instructions
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {/*  */}
-            <div className="bg-[var(--color-tertiary)]/30 px-4 py-2 rounded-md text-center place-content-center">
-              During registration, upload proof of payment confirmation.
+            <div className="bg-[var(--color-tertiary)]/30 px-4 py-3 rounded-md text-center place-content-center">
+              During registration, please upload proof of payment confirmation.
             </div>
 
             {/* fee details */}
-            <div className="bg-[var(--color-tertiary)]/30 px-4 py-2 rounded-md text-center place-content-center">
-              <span className="text-[var(--color-secondary)]">
-                <b>Registration fee includes:</b>
+            <div className="bg-[var(--color-tertiary)]/30 px-4 py-3 rounded-md text-center place-content-center">
+              <span className="text-xl text-[var(--color-secondary)] font-extrabold">
+                Registration fee includes:
               </span>
               <ul>
-                <li>Access to all scientific sessions</li>
-                <li>Conference kit</li>
+                <li>Access to all scientific sessions,</li>
+                <li>Conference kit,</li>
                 <li>Tea/coffee breaks, lunches, and dinner</li>
               </ul>
             </div>
 
             {/* Bank details */}
-            <div className="bg-[var(--color-tertiary)]/30 px-4 py-2 rounded-md text-center place-content-center">
-              <span className="text-[var(--color-secondary)]">
+            <div className="bg-[var(--color-tertiary)]/30 px-4 py-3 rounded-md place-content-center max-md:col-span-2 max-sm:col-span-1">
+              <span className="text-[var(--color-secondary)] inline-block w-full text-center">
                 <b>Payment through NEFT:</b>
               </span>
               <br />
-              <span className="text-[var(--color-secondary)]">
+              <span className="text-[var(--color-secondary)] inline-block w-full text-center">
                 <b>Bank Details:</b>
               </span>
-              <ul>
-                <li>
-                  <b>Name:</b> Organising Secretary, VIBCON 2019
-                </li>
-                <li>
-                  <b>Bank Name:</b> HDFC, Priyadarshini Nagar, Bareilly
-                </li>
-                <li>
-                  <b>Account Number:</b> 50100322363522
-                </li>
-                <li>
-                  <b>IFSC:</b> HDFC0000860
-                </li>
-              </ul>
+              <div className="place-items-center">
+                <ul className="text-sm">
+                  <li>
+                    <b>Name:</b> Organising Secretary, VIBCON 2019
+                  </li>
+                  <li>
+                    <b>Bank:</b> HDFC, Priyadarshini Nagar, Bareilly
+                  </li>
+                  <li>
+                    <b>Account Number:</b> 50100322363522
+                  </li>
+                  <li>
+                    <b>IFSC:</b> HDFC0000860
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

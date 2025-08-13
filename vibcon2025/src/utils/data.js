@@ -98,11 +98,6 @@ export const aboutLists = [
 
 export const organizingCommitte = [
   {
-    name: "Dr. Yashpal Singh Malik",
-    position: "Joint Director, ICAR-IVRI Mukteswar",
-    role: "Chairman Organizing Committe",
-  },
-  {
     name: "Dr. Raghavendra Bhatta",
     position: "DDG (Animal Sceince), ICAR, New Delhi",
     role: "Chief Patron",
@@ -111,6 +106,11 @@ export const organizingCommitte = [
     name: "Dr. Triveni Dutt",
     position: "Director -cum -VC, ICAR-IVRI, Izatnagar",
     role: "Patron",
+  },
+  {
+    name: "Dr. Yashpal Singh Malik",
+    position: "Joint Director, ICAR-IVRI, Mukteswar",
+    role: "Chairman Organizing Committe",
   },
   {
     name: "Dr. Karam Chand",
@@ -161,5 +161,43 @@ export const organizingCommitte = [
     name: "Dr. Nitish Singh Kharayat",
     position: "Scientist, ICAR-IVRI, Mukteswar",
     role: "Finance Secretory",
+  },
+];
+
+export const officeBearers = [
+  {
+    name: "Dr Baldev Raj Gulati",
+    position: "Director, ICAR-NIVEDI, Bengaluru",
+    role: "President",
+  },
+  {
+    name: "Dr G. Dhinakar Raj",
+    position: "Director (Retd.), CAHS, TANUVAS, Chennai",
+    role: "Vice-President",
+  },
+  {
+    name: "Dr. Yashpal Singh Malik",
+    position: "Joint Director, ICAR-IVRI, Mukteswar",
+    role: "Vice-President",
+  },
+  {
+    name: "Dr S Manoharan",
+    position: "Prof. and Head, TANUVAS, Chennai",
+    role: "Secretary",
+  },
+  {
+    name: "Dr A Thangavelu",
+    position: "Head (Retd.), TANUVAS, Chennai",
+    role: "Joint-Secretary",
+  },
+  {
+    name: "Dr K Kumanan",
+    position: "Director Res. (Retd.), TANUVAS, Chennai",
+    role: "Joint-Secretary",
+  },
+  {
+    name: "Dr M Ananda Chitra",
+    position: "Professor, TANUVAS, Chennai",
+    role: "Treasurer",
   },
 ];

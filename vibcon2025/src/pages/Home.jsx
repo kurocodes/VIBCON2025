@@ -44,7 +44,7 @@ export default function Home() {
           {/* Register now CTA section */}
           <CTASection
             heading="Why You Shouldn't Miss This Event"
-            image={images.preview_image_3}
+            image={images.mukteswar_photo}
             listTitle={
               <>
                 <span className="text-[var(--color-accent)]">VIBCON 2025</span>{" "}
@@ -98,12 +98,14 @@ export default function Home() {
 const introParagraph = (
   <>
     <b>Welcome to VIBCON 2025</b> — an international conference hosted by{" "}
-    <b>ICAR-IVRI Mukteswar</b> in collaboration with <b>ISVIB</b>, dedicated to
-    advancing veterinary immunology and biotechnology under the theme{" "}
+    <b>ICAR-IVRI Mukteswar campus</b> in collaboration with{" "}
+    <b>Indian society of Veterinary Immunology & Biotechnology (ISVIB)</b>,
+    dedicated to advancing veterinary immunology and biotechnology under the
+    theme{" "}
     <span className="text-[var(--color-accent)]">
       “Envisioning Livestock Production and Protection under the One Health
-      Landscape.”
-    </span>{" "}
+      Landscape”
+    </span>.{" "}
     Set against the tranquil backdrop of the Kumaon Himalayas, this event offers
     a dynamic platform for scientists, researchers, and professionals to
     exchange cutting-edge ideas and solutions shaping the future of animal

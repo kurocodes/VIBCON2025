@@ -34,26 +34,26 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed w-full px-5 lg:px-26 flex items-center justify-between transition-colors duration-300 ${
+      className={`fixed w-full px-5 xl:px-26 flex items-center justify-between transition-colors duration-300 ${
         isTransparent ? "bg-transparent" : "bg-[var(--color-primary)]"
       } z-2`}
     >
       {/* Logo (IVRI signature logo) */}
       <div
         className={`${
-          !isTransparent && "hover:bg-white"
+          !isTransparent && "bg-white"
         } h-18 place-content-center px-2 transition duration-300`}
       >
         <img
           src={images.ivri_signature_logo}
           alt="Logo"
-          className="w-20 cursor-pointer"
+          className="w-20 cursor-pointer drop"
           onClick={() => navigate("/")}
         />
       </div>
 
       {/* Navigation Links */}
-      <nav className="hidden md:block">
+      <nav className="hidden lg:block">
         <ul className="flex gap-6 text-[var(--color-text)] text-md font-bold">
           <li>
             <NavLink to="/" className={getNavItemStyle}>
@@ -68,6 +68,11 @@ export default function Navbar() {
           <li>
             <NavLink to="/events" className={getNavItemStyle}>
               Program & Events
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/organizers" className={getNavItemStyle}>
+              Organizers
             </NavLink>
           </li>
           <li>
@@ -121,9 +126,13 @@ export default function Navbar() {
       </div>
 
       {/* Menu icon for small screens */}
-      <div className="text-[var(--color-text)] md:hidden">
+      <div className="text-[var(--color-text)] lg:hidden">
         <button onClick={() => setShowSidebar(true)}>
-          <img src={icons.menu_icon} alt="menu_icon" className="w-10 h-10" />
+          <img
+            src={icons.menu_icon}
+            alt="menu_icon"
+            className="w-10 h-10 cursor-pointer"
+          />
         </button>
       </div>
     </div>

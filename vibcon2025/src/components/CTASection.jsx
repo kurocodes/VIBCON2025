@@ -17,7 +17,7 @@ export default function CTASection({
           <img
             src={image}
             alt="mukteswar_mother_campus"
-            className="w-full h-full rounded-md hover:scale-110 transition duration-500 object-cover"
+            className="w-full h-full rounded-md hover:scale-110 transition duration-500 object-cover object-bottom"
           />
         </div>
 

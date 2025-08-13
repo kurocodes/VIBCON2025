@@ -9,6 +9,7 @@ import Events from "./pages/Events";
 import Abstract from "./pages/Abstract";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import PageNotFound from "./pages/PageNotFound";
+import Organizers from "./pages/Organizers";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/organizers" element={<Organizers />} />
         <Route path="/abstract" element={<Abstract />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/travel" element={<Travel />} />

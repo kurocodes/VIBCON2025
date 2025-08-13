@@ -142,12 +142,18 @@ export default function Travel() {
 
         {/* Accomodation and More details */}
         <div className="w-full mb-10 border-s-4 border-[var(--color-primary)] p-5 bg-[var(--color-tertiary)]/30 rounded-lg">
+        <h4 className="text-[var(--color-secondary)] text-xl font-bold">Accommodation</h4>
           <p>
-            Mukteshwar offers a variety of accommodation options — from guest
+            {/* Mukteshwar offers a variety of accommodation options — from guest
             houses and eco-lodges to budget-friendly hotels. Delegates are
             advised to book early, as limited on-campus rooms at IVRI Mukteshwar
             may be available (updates will be shared via email or official
-            website).
+            website). */}
+            Mukteswar offers a range of accommodation options, from guest houses
+            to affordable hotels. Delegates are encouraged to book their
+            accommodation well in advance. Limited on-campus accommodation may
+            be available at IVRI, Mukteswar details will be provided on the
+            website or through e-mail.
           </p>
           <div>
             <span className="text-[var(--color-primary)] font-bold text-lg">

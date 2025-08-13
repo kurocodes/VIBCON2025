@@ -4,6 +4,9 @@ import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
 import { useGeneralContext } from "../context/genrealContext";
 
+const IVRI_MUKTESWAR_LOCATION =
+  "https://www.google.com/maps/place/IVRI+Campus+Mukteshwar/@29.4723296,79.6475247,18.93z/data=!4m6!3m5!1s0x39a0bd00579c3efb:0x7d41d68ceee15acd!8m2!3d29.4723312!4d79.648013!16s%2Fg%2F11x82xc9gl?entry=ttu&g_ep=EgoyMDI1MDgxMC4wIKXMDSoASAFQAw%3D%3D";
+
 export default function Hero({
   height,
   compact = false,
@@ -85,12 +88,12 @@ export default function Hero({
                 6 - 8 November 2025
               </span>
             </div>
-            <div className="flex items-center gap-2">
+            <a href={IVRI_MUKTESWAR_LOCATION} target="_blank" className="flex items-center gap-2 cursor-pointer">
               <img src={icons.location_icon} alt="location icon" />
               <span className="text-[var(--color-accent)] font-bold text-lg">
                 Nainital, (Uttarakhand) INDIA
               </span>
-            </div>
+            </a>
           </div>
 
           {/* Action Buttons */}
@@ -108,7 +111,7 @@ export default function Hero({
             <img src={icons.message_icon} alt="message_icon" className="w-12" />
             <div className="flex flex-col">
               <span className="text-[var(--color-accent)]">
-                <b>Organized by:</b> Dr. Yashpal Singh Malik
+                <b>Chairman:</b> Dr. Yashpal Singh Malik
               </span>
               <span className="text-sm">
                 Joint Director, ICAR-IVRI, Mukteswar

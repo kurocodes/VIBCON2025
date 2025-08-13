@@ -2,15 +2,16 @@ import { useForm } from "react-hook-form";
 import { toast, Bounce } from "react-toastify";
 import { useState } from "react";
 
+const inputFieldStyle =
+  "w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]";
+
 export default function AbstractSubmission() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
   } = useForm();
-
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (data) => {
@@ -30,25 +31,11 @@ export default function AbstractSubmission() {
       if (result.status === "success") {
         reset();
         toast.success("Abstract submitted successfully!", {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
           theme: "colored",
           transition: Bounce,
         });
       } else {
         toast.error("Failed to submit! Try again!", {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
           theme: "colored",
           transition: Bounce,
         });
@@ -56,16 +43,13 @@ export default function AbstractSubmission() {
     } catch (error) {
       console.error("Error:", error);
       toast.error("Submission failed!", {
-        position: "bottom-right",
         theme: "colored",
         transition: Bounce,
       });
     } finally {
-      setIsSubmitting(false); // Enable button again
+      setIsSubmitting(false);
     }
   };
-
-  const abstractText = watch("abstractText", "");
 
   return (
     <div className="pt-30 mb-20">
@@ -75,130 +59,149 @@ export default function AbstractSubmission() {
         </h1>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* Name */}
+          {/* Title */}
           <div>
             <label className="block font-medium text-[var(--color-accent)]">
-              Name *
+              Title (in CAPITAL letters) *
             </label>
             <input
               type="text"
-              {...register("name", { required: "Name is required" })}
-              className="w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]"
-            />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
-            )}
-          </div>
-
-          {/* Affiliation */}
-          <div>
-            <label className="block font-medium text-[var(--color-accent)]">
-              Affiliation *
-            </label>
-            <input
-              type="text"
-              {...register("affiliation", {
-                required: "Affiliation is required",
-              })}
-              className="w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]"
-            />
-            {errors.affiliation && (
-              <p className="text-red-500 text-sm">
-                {errors.affiliation.message}
-              </p>
-            )}
-          </div>
-
-          {/* Email */}
-          <div>
-            <label className="block font-medium text-[var(--color-accent)]">
-              Email *
-            </label>
-            <input
-              type="email"
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /\S+@\S+\.\S+/,
-                  message: "Invalid email address",
-                },
-              })}
-              className="w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
-            )}
-          </div>
-
-          {/* Abstract Title */}
-          <div>
-            <label className="block font-medium text-[var(--color-accent)]">
-              Abstract Title *
-            </label>
-            <input
-              type="text"
-              {...register("title", { required: "Abstract title is required" })}
-              className="w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]"
+              {...register("title", { required: "Title is required" })}
+              className={inputFieldStyle}
             />
             {errors.title && (
               <p className="text-red-500 text-sm">{errors.title.message}</p>
             )}
           </div>
 
-          {/* Abstract Text */}
+          {/* Authors & Institutional Address */}
           <div>
             <label className="block font-medium text-[var(--color-accent)]">
-              Abstract Text
+              Authors’ name and institutional address *
             </label>
             <textarea
-              {...register("abstractText")}
-              rows={5}
-              className="w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]"
-            ></textarea>
-            <p className="text-xs text-[var(--color-text)] mt-1">
-              Abstracts (max 300 words)
-            </p>
-          </div>
-
-          {/* Category */}
-          <div>
-            <label className="block font-medium text-[var(--color-accent)]">
-              Category *
-            </label>
-            <input
-              type="text"
-              {...register("category", { required: "Category is required" })}
-              className="w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]"
-              placeholder="e.g. Veterinary Immunology"
+              {...register("authors", {
+                required: "Authors and address are required",
+              })}
+              rows={2}
+              className={inputFieldStyle}
             />
-            {errors.category && (
-              <p className="text-red-500 text-sm">{errors.category.message}</p>
+            {errors.authors && (
+              <p className="text-red-500 text-sm">{errors.authors.message}</p>
             )}
           </div>
 
-          {/* Presentation Preference */}
+          {/* Presenting Author, Email, Mobile */}
           <div>
             <label className="block font-medium text-[var(--color-accent)]">
-              Presentation Preference *
+              Presenting Author (#), Email ID, Mobile No. *
             </label>
-            <select
-              {...register("preference", {
-                required: "Presentation preference is required",
+            <input
+              type="text"
+              {...register("presentingAuthor", {
+                required: "This field is required",
               })}
-              className="w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]"
-            >
-              <option value="">Select...</option>
-              <option value="Oral">Oral</option>
-              <option value="Poster">Poster</option>
-            </select>
-            {errors.preference && (
+              className={inputFieldStyle}
+            />
+            {errors.presentingAuthor && (
               <p className="text-red-500 text-sm">
-                {errors.preference.message}
+                {errors.presentingAuthor.message}
               </p>
             )}
           </div>
 
-          {/* Submit Button */}
+          {/* Introduction */}
+          <div>
+            <label className="block font-medium text-[var(--color-accent)]">
+              Introduction (20–30 words) *
+            </label>
+            <textarea
+              {...register("introduction", {
+                required: "Introduction is required",
+              })}
+              rows={2}
+              className={inputFieldStyle}
+            />
+            {errors.introduction && (
+              <p className="text-red-500 text-sm">
+                {errors.introduction.message}
+              </p>
+            )}
+          </div>
+
+          {/* Objectives */}
+          <div>
+            <label className="block font-medium text-[var(--color-accent)]">
+              Objectives of the study (20–30 words) *
+            </label>
+            <textarea
+              {...register("objectives", {
+                required: "Objectives are required",
+              })}
+              rows={2}
+              className={inputFieldStyle}
+            />
+            {errors.objectives && (
+              <p className="text-red-500 text-sm">
+                {errors.objectives.message}
+              </p>
+            )}
+          </div>
+
+          {/* Methodology */}
+          <div>
+            <label className="block font-medium text-[var(--color-accent)]">
+              Brief Methodology (100–120 words) *
+            </label>
+            <textarea
+              {...register("methodology", {
+                required: "Methodology is required",
+              })}
+              rows={5}
+              className={inputFieldStyle}
+            />
+            {errors.methodology && (
+              <p className="text-red-500 text-sm">
+                {errors.methodology.message}
+              </p>
+            )}
+          </div>
+
+          {/* Results */}
+          <div>
+            <label className="block font-medium text-[var(--color-accent)]">
+              Results (80–100 words) *
+            </label>
+            <textarea
+              {...register("results", { required: "Results are required" })}
+              rows={4}
+              className={inputFieldStyle}
+            />
+            {errors.results && (
+              <p className="text-red-500 text-sm">{errors.results.message}</p>
+            )}
+          </div>
+
+          {/* Conclusions */}
+          <div>
+            <label className="block font-medium text-[var(--color-accent)]">
+              Conclusions and implications (20–30 words) *
+            </label>
+            <textarea
+              {...register("conclusions", {
+                required: "Conclusions are required",
+              })}
+              rows={2}
+              className={inputFieldStyle}
+            />
+            {errors.conclusions && (
+              <p className="text-red-500 text-sm">
+                {errors.conclusions.message}
+              </p>
+            )}
+          </div>
+
+          {/* Submit */}
           <button
             type="submit"
             disabled={isSubmitting}

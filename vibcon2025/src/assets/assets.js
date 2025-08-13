@@ -12,6 +12,7 @@ import bunglow_image_1 from "./images/bunglow_image.jpeg";
 import bunglow_image_2 from "./images/bunglow_image_2.jpeg";
 import football_ground_mukteshwar from "./images/football_ground_mukteshwar.jpeg";
 import mukteshwar_mother_campus from "./images/mukteshwar_mother_campus.jpeg";
+import mukteswar_photo from "./images/mukteswar_photo.jpg"
 
 import preview_image_1 from "./images/preview_image_1.jpg";
 import preview_image_2 from "./images/preview_image_2.jpg";
@@ -63,6 +64,7 @@ export const images = {
   preview_image_2,
   preview_image_3,
   preview_image_4,
+  mukteswar_photo,
 };
 
 export const travelHighlights = [

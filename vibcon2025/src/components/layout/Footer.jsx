@@ -10,26 +10,26 @@ export default function Footer() {
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 lg:gap-20 px-4 sm:px-10 md:px-30 mb-10">
         <div className="text-start">
           {/* Footer Images */}
-          <div className="flex items-center gap-4 mb-2 bg-white w-fit px-4 rounded-md">
-            <div className="w-12 h-12 place-content-center">
+          <div className="flex items-center mb-2 bg-white w-fit rounded-md py-2 px-1 gap-4">
+            <div className="w-15 h-15 place-content-center place-items-center">
+              <img src={images.icar_logo} alt="logo" className="w-10" />
+            </div>
+            <div className="w-15 h-15 place-content-center">
               <img
                 src={images.ivri_signature_logo}
                 alt="logo"
                 className="w-full h-auto"
               />
             </div>
-            <div className="w-20 h-20 bg-white rounded-full place-content-center place-items-center">
-              <img src={images.icar_logo} alt="logo" className="w-10" />
-            </div>
-            <div className="w-15 h-15 bg-white rounded-full place-content-center place-items-center">
-              <img src={images.ivri_logo} alt="logo" className="w-10" />
-            </div>
             <div className="w-15 h-15 bg-white rounded-full place-content-center place-items-center">
               <img
                 src={images.isvib_logo}
                 alt="logo"
-                className="w-17 mt-[2px]"
+                className="w-full h-full"
               />
+            </div>
+            <div className="w-15 h-15 bg-white rounded-full place-content-center place-items-center">
+              <img src={images.ivri_logo} alt="logo" className="w-10" />
             </div>
           </div>
 
@@ -59,6 +59,9 @@ export default function Footer() {
             </li>
             <li className={linkStyle}>
               <NavLink to="/events">Program & Events</NavLink>
+            </li>
+            <li className={linkStyle}>
+              <NavLink to="/organizers">Organizers</NavLink>
             </li>
             <li className={linkStyle}>
               <NavLink to="/registration">Registration</NavLink>

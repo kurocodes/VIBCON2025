@@ -88,7 +88,7 @@ export default function About() {
         </div>
 
         {/* Organizers */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <h2 className="text-3xl font-bold text-[var(--color-secondary)]">
             Organizing Committee
           </h2>
@@ -98,13 +98,13 @@ export default function About() {
               <OrganizerCard key={index} organizer={organizer} />
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Download Brochure */}
         <div className="w-full flex justify-center mt-20">
           <PrimaryButton
             label="Download Brochure"
-            action={() => window.open("/src/vibcon_brochure.pdf", "_blank")}
+            action={() => window.open("/vibcon_brochure.pdf", "_blank")}
             style="w-fit px-6 bg-[var(--color-primary)] hover:bg-[var(--color-accent))] flex items-center gap-4"
             Icon={FaCloudDownloadAlt}
           />
@@ -145,22 +145,6 @@ function AboutList({ title, list, index }) {
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-// OrganizerCard Component - Displaying each organizer's details
-function OrganizerCard({ organizer }) {
-  return (
-    <div className="border border-[var(--color-secondary)] rounded-md p-4 space-y-2">
-      <div className="w-full rounded-md overflow-hidden bg-[var(--color-secondary)]"></div>
-      <span className="text-lg font-semibold">{organizer.name}</span>
-      <div className="flex flex-col">
-        <span className="font-semibold text-sm">{organizer.position}</span>
-        <span className="text-sm font-semibold opacity-60">
-          {organizer.role}
-        </span>
-      </div>
     </div>
   );
 }
