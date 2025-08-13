@@ -52,6 +52,21 @@ export default function Events() {
             </div>
           ))}
         </div>
+
+        <div className="w-full mt-10 border-s-4 border-[var(--color-primary)] p-5 bg-[var(--color-secondary)]/20 rounded-lg">
+          <h4 className="text-[var(--color-secondary)] text-xl font-bold">
+            Conditions of the Award
+          </h4>
+          <p>
+            Soft copy of applications for the awards (except for ISVIB fellow)
+            shall be sent to the Secretary, ISVIB at manoulagai@gmail.com
+            strictly before 30th September, 2025. The contestants' must be a
+            life member of ISVIB before 30th September 2025. Membership
+            application form, detailed guidelines for awards and application
+            proforma for awards can be downloaded from the society website:{" "}
+            <a href="https://www.isvib.org/" target="_blank" className="text-[var(--color-primary)] hover:underline">www.isvib.org</a>
+          </p>
+        </div>
       </section>
 
       {/* Themes */}

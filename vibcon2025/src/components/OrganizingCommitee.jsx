@@ -5,7 +5,7 @@ export default function OrganizingCommitee() {
   return (
     <div>
       <h2 className="text-3xl font-bold text-[var(--color-secondary)] text-center lg:pb-2 lg:border-b-2 lg:border-[var(--color-secondary)]">
-        Organizing Committee
+        Local Organizing Committee
       </h2>
 
       {/* Large Scrren - Tree Structure */}

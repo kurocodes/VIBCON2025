@@ -1,5 +1,7 @@
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { icons, images } from "../../assets/assets";
 import { NavLink } from "react-router-dom";
+import SocialMedia from "../SocialMedia";
 
 const linkStyle =
   "w-fit hover:text-[var(--color-accent)] hover:max-lg:-translate-y-1 hover:lg:translate-x-2 transition-all duration-300";
@@ -7,10 +9,10 @@ const linkStyle =
 export default function Footer() {
   return (
     <div className="bg-[var(--color-primary)] text-[var(--color-text)] pt-10 text-center">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-3 lg:gap-20 px-4 sm:px-10 md:px-30 mb-10">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-20 px-4 sm:px-10 md:px-30 mb-10">
         <div className="text-start">
           {/* Footer Images */}
-          <div className="flex items-center mb-2 bg-white w-fit rounded-md py-2 px-1 gap-4">
+          <div className="flex items-center lg:flex-wrap max-lg:justify-around justify-center mb-2 bg-white max-lg:w-full rounded-md py-2 max-lg:px-5 gap-4">
             <div className="w-15 h-15 place-content-center place-items-center">
               <img src={images.icar_logo} alt="logo" className="w-10" />
             </div>
@@ -48,7 +50,7 @@ export default function Footer() {
         </div>
 
         {/* Nav Links */}
-        <div className="text-start mt-10">
+        <div className="text-start">
           <h3 className="text-xl font-bold">Quick Links</h3>
           <ul className="mt-2 max-lg:flex max-lg:flex-wrap gap-4">
             <li className={linkStyle}>
@@ -64,27 +66,41 @@ export default function Footer() {
               <NavLink to="/organizers">Organizers</NavLink>
             </li>
             <li className={linkStyle}>
+              <NavLink to="/travel">Travel</NavLink>
+            </li>
+            <li className={linkStyle}>
+              <NavLink to="/abstract">Abstract</NavLink>
+            </li>
+            <li className={linkStyle}>
               <NavLink to="/registration">Registration</NavLink>
             </li>
             <li className={linkStyle}>
-              <NavLink to="/travel">Travel</NavLink>
+              <NavLink to="/feedback">Feedback</NavLink>
             </li>
           </ul>
         </div>
 
         {/* Contacts */}
-        <div className="text-start mt-10">
+        <div className="text-start">
           <h3 className="text-xl font-bold">Contact Us</h3>
           <div className="mt-2 space-y-2">
+            {/* Email */}
             <div className="flex items-center gap-2">
               <img src={icons.mail_icon} alt="mail_icon" />
               <span className="text-[var(--color-accent)]">
                 isvibcon2025@gmail.com
               </span>
             </div>
+
+            {/* Phone */}
             <div className="flex items-center gap-2">
               <img src={icons.phone_icon} alt="phone_icon" />
               <span className="text-[var(--color-accent)]">05942-286346</span>
+            </div>
+
+            {/* Social media */}
+            <div className="flex items-center gap-2 mt-4">
+              <SocialMedia  />
             </div>
           </div>
         </div>

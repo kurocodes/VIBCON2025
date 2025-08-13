@@ -151,6 +151,47 @@ function AboutList({ title, list, index }) {
 
 export const aboutParagraphs = [
   {
+    title: "About IVRI, Izatnagar",
+    about: (
+      <>
+        The Indian Veterinary Research Institute (IVRI), is one of India's
+        oldest research institutions in animal sciences. It has completed 135
+        years of significant contributions to veterinary and animal Sciences.
+        This ISO 9001:2015 certified Institute conducts basic and strategic
+        research to enhance animal health and productivity, as well as to
+        improve farmers' livelihoods through technology dissemination. IVRI
+        started providing quality education and training. The institute has
+        played a significant role in the eradication of several dreaded animal
+        diseases, including Dourine, Rinderpest, CBPP and African Horse
+        Sickness. IVRI has 47 technologies commercialized and 34 granted patents
+        for various livestock and poultry diseases through extensive research
+        and is now advancing the development of combined and next-generation
+        marker vaccines using modern technologies.
+      </>
+    ),
+  },
+  {
+    title: "About IVRI, Mukteswar",
+    about: (
+      <>
+        Established in 1893, IVRI Mukteswar is a premier institution for
+        veterinary research in India. Nestled in the Kumaon Himalayas at an
+        altitude above 7,500 feet, the campus provides a serene and inspiring
+        environment for scientific pursuits. IVRI, Mukteswar houses the
+        Divisions of Virology and Temperate Animal Husbandry. The institute
+        conducts basic, adaptive and applied research on animal viral diseases
+        along with livestock production under temperate conditions. IVRI,
+        Mukteswar has developed various vaccines for viral diseases like
+        Rinderpest (RP), Peste-des-petits Rumiants (PPR), goatpox, sheeppox,
+        orf, camelpox, PPR and goatpox/sheeppox combined and marker PPR
+        vaccines. Campus has also developed diagnostics technologies for various
+        diseases like RP, PPR, Pox and Bluetongue. IVRI conducts extension
+        activities and partnership development with other agencies to showcase
+        the technologies and their dissemination.
+      </>
+    ),
+  },
+  {
     title: "About ISVIB",
     about: (
       <>

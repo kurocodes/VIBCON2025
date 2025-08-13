@@ -8,6 +8,7 @@ export default function OfficeBearers() {
         ISVIB Office-Bearers
       </h2>
 
+      {/* Large Screen - Tree Structure */}
       <div className="hidden lg:block space-y-2 mt-5">
         <div className="place-items-center">
           <OrganizerCard organizer={officeBearers[0]} />
@@ -36,6 +37,7 @@ export default function OfficeBearers() {
         </div>
       </div>
 
+      {/* Small Screen - List Structure */}
       <div className="lg:hidden space-y-4 mt-5">
         <div className="space-y-2">
           <h3 className="flex items-center gap-4"><span className="text-xl font-bold">President</span> <div className="h-[1px] grow bg-black"></div></h3>

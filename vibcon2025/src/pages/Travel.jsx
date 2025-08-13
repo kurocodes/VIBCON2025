@@ -142,7 +142,9 @@ export default function Travel() {
 
         {/* Accomodation and More details */}
         <div className="w-full mb-10 border-s-4 border-[var(--color-primary)] p-5 bg-[var(--color-tertiary)]/30 rounded-lg">
-        <h4 className="text-[var(--color-secondary)] text-xl font-bold">Accommodation</h4>
+          <h4 className="text-[var(--color-secondary)] text-xl font-bold">
+            Accommodation
+          </h4>
           <p>
             {/* Mukteshwar offers a variety of accommodation options — from guest
             houses and eco-lodges to budget-friendly hotels. Delegates are

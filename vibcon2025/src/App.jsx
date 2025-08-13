@@ -10,6 +10,7 @@ import Abstract from "./pages/Abstract";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import PageNotFound from "./pages/PageNotFound";
 import Organizers from "./pages/Organizers";
+import Feedback from "./pages/Feedback";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/abstract" element={<Abstract />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/travel" element={<Travel />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </MainLayout>

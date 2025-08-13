@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { icons } from "../../assets/assets";
 import { useGeneralContext } from "../../context/genrealContext";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import SocialMedia from "../SocialMedia";
 
 export default function Sidebar() {
   const { setShowSidebar } = useGeneralContext();
@@ -10,36 +12,7 @@ export default function Sidebar() {
       {/* Sidebar header */}
       <div className="w-full flex justify-between items-center p-4 border-b-2 border-[var(--color-secondary)]">
         {/* Social media links for small screens */}
-        <div>
-          <ul className="flex gap-4">
-            <li className="border-2 border-[var(--color-secondary)] rounded-full">
-              <a
-                href="https://www.linkedin.com/company/vibcon2025/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={icons.linkedin_icon}
-                  alt="LinkedIn"
-                  className="w-8 h-8 hover:scale-110 transition-transform duration-200"
-                />
-              </a>
-            </li>
-            <li className="border-2 border-[var(--color-secondary)] rounded-full">
-              <a
-                href="https://x.com/vibcon2025"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={icons.x_icon}
-                  alt="X"
-                  className="w-8 h-8 hover:scale-110 transition-transform duration-200"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
+        <SocialMedia iconColor="black" />
 
         {/* Close sidebar button */}
         <button
@@ -98,6 +71,12 @@ export default function Sidebar() {
             onClick={() => setShowSidebar(false)}
           >
             <NavLink to="/registration">Registration</NavLink>
+          </li>
+          <li
+            className="text-[var(--color-primary)] hover:text-[var(--color-accent)]"
+            onClick={() => setShowSidebar(false)}
+          >
+            <NavLink to="/feedback">Feedback</NavLink>
           </li>
         </ul>
       </nav>

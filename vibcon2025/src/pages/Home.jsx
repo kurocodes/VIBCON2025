@@ -39,6 +39,13 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Carousel */}
+        <div className="">
+          <div>
+            
+          </div>
+        </div>
+
         {/* CTA sections */}
         <div className="space-y-10">
           {/* Register now CTA section */}

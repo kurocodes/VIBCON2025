@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { icons, images } from "../../assets/assets";
 import { useGeneralContext } from "../../context/genrealContext";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import SocialMedia from "../SocialMedia";
 
 export default function Navbar() {
   const { setShowSidebar, navigate } = useGeneralContext();
@@ -18,11 +20,13 @@ export default function Navbar() {
   }, []);
 
   const navItemBaseStyle =
-    "hover:text-[var(--color-accent)] transition-colors font-light";
+    "transition-all px-1 pb-2 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:after:w-full hover:text-[var(--color-accent)]";
 
   const getNavItemStyle = ({ isActive }) =>
     `${navItemBaseStyle} ${
-      isActive ? "border-b-2 border-[var(--color-accent)] pb-1" : ""
+      isActive
+        ? "text-[var(--color-accent)] after:w-full after:bg-[var(--color-accent)] font-bold"
+        : "text-[var(--color-text)] font-medium"
     }`;
 
   const allowTransparent =
@@ -90,40 +94,16 @@ export default function Navbar() {
               Registration
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/feedback" className={getNavItemStyle}>
+              Feedback
+            </NavLink>
+          </li>
         </ul>
       </nav>
 
       {/* Social Media Links */}
-      <div className="hidden md:block">
-        <ul className="flex gap-4">
-          <li>
-            <a
-              href="https://www.linkedin.com/company/vibcon2025/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={icons.linkedin_icon}
-                alt="LinkedIn"
-                className="w-8 h-8 hover:scale-110 transition-transform duration-200"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://x.com/vibcon2025"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={icons.x_icon}
-                alt="X"
-                className="w-8 h-8 hover:scale-110 transition-transform duration-200"
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <SocialMedia hideOnSmallScreen />
 
       {/* Menu icon for small screens */}
       <div className="text-[var(--color-text)] lg:hidden">
