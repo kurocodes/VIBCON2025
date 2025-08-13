@@ -1,8 +1,8 @@
 import Hero from "../components/Hero";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import PrimaryButton from "../components/PrimaryButton";
-import { aboutLists, organizingCommitte } from "../utils/data";
-import { icons, images } from "../assets/assets";
+import { aboutLists } from "../utils/data";
+import { images } from "../assets/assets";
 
 export default function About() {
   return (

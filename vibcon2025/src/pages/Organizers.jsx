@@ -1,7 +1,5 @@
 import OfficeBearers from "../components/OfficeBearers";
-import OrganizerCard from "../components/OrganizerCard";
 import OrganizingCommitee from "../components/OrganizingCommitee";
-import { organizingCommitte } from "../utils/data";
 
 export default function Organizers() {
   return (

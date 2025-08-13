@@ -3,6 +3,9 @@ import { images } from "../assets/assets";
 import PrimaryButton from "../components/PrimaryButton";
 import { useGeneralContext } from "../context/genrealContext";
 import CTASection from "../components/CTASection";
+import { speakers } from "../utils/peoples";
+import SpeakerCard from "../components/SpeakerCard";
+import Carousel from "../components/Carousel";
 
 export default function Home() {
   const { navigate } = useGeneralContext();
@@ -40,11 +43,7 @@ export default function Home() {
         </div>
 
         {/* Carousel */}
-        <div className="">
-          <div>
-            
-          </div>
-        </div>
+        <Carousel data={speakers} Card={SpeakerCard} />
 
         {/* CTA sections */}
         <div className="space-y-10">
@@ -112,9 +111,9 @@ const introParagraph = (
     <span className="text-[var(--color-accent)]">
       “Envisioning Livestock Production and Protection under the One Health
       Landscape”
-    </span>.{" "}
-    Set against the tranquil backdrop of the Kumaon Himalayas, this event offers
-    a dynamic platform for scientists, researchers, and professionals to
+    </span>
+    . Set against the tranquil backdrop of the Kumaon Himalayas, this event
+    offers a dynamic platform for scientists, researchers, and professionals to
     exchange cutting-edge ideas and solutions shaping the future of animal
     health and productivity.
   </>

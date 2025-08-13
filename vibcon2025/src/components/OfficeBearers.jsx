@@ -1,4 +1,4 @@
-import { officeBearers, organizingCommitte } from "../utils/data";
+import { officeBearers } from "../utils/peoples";
 import OrganizerCard from "./OrganizerCard";
 
 export default function OfficeBearers() {

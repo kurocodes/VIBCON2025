@@ -1,4 +1,4 @@
-import { organizingCommitte } from "../utils/data";
+import { organizingCommitte } from "../utils/peoples";
 import OrganizerCard from "./OrganizerCard";
 
 export default function OrganizingCommitee() {
@@ -20,29 +20,38 @@ export default function OrganizingCommitee() {
           </div>
         </div>
         <div className="place-items-center">
-          <div className="flex gap-2 ">
-            <OrganizerCard organizer={organizingCommitte[3]} />
-            <OrganizerCard organizer={organizingCommitte[4]} />
+          <div className="flex gap-2 flex-wrap justify-center">
+            <OrganizerCard organizer={organizingCommitte[3]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[4]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[5]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[6]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[7]} smallWidth />
           </div>
         </div>
         <div className="place-items-center">
           <div className="flex gap-2 ">
-            <OrganizerCard organizer={organizingCommitte[5]} />
-            <OrganizerCard organizer={organizingCommitte[6]} />
+            <OrganizerCard organizer={organizingCommitte[8]} />
+            <OrganizerCard organizer={organizingCommitte[9]} />
+          </div>
+        </div>
+        <div className="place-items-center">
+          <div className="flex gap-2 ">
+            <OrganizerCard organizer={organizingCommitte[10]} />
+            <OrganizerCard organizer={organizingCommitte[11]} />
           </div>
         </div>
         <div className="place-items-center">
           <div className="flex gap-2 flex-wrap justify-center">
-            <OrganizerCard organizer={organizingCommitte[7]} smallWidth />
-            <OrganizerCard organizer={organizingCommitte[8]} smallWidth />
-            <OrganizerCard organizer={organizingCommitte[9]} smallWidth />
-            <OrganizerCard organizer={organizingCommitte[10]} smallWidth />
-            <OrganizerCard organizer={organizingCommitte[11]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[12]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[13]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[14]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[15]} smallWidth />
+            <OrganizerCard organizer={organizingCommitte[16]} smallWidth />
           </div>
         </div>
         <div className="place-items-center">
           <div className="flex gap-2">
-            <OrganizerCard organizer={organizingCommitte[12]} />
+            <OrganizerCard organizer={organizingCommitte[17]} />
           </div>
         </div>
       </div>
@@ -80,12 +89,46 @@ export default function OrganizingCommitee() {
         {/* Chairman Organizing Commitee */}
         <div className="space-y-2">
           <h3 className="flex items-center gap-4">
-            <span className="text-xl font-bold">Chairman Organizing Commitee</span>{" "}
+            <span className="text-xl font-bold">
+              Chairman Organizing Commitee
+            </span>{" "}
             <div className="h-[1px] grow bg-black"></div>
           </h3>
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2">
             <OrganizerCard
               organizer={organizingCommitte[2]}
+              smallScreen={true}
+            />
+          </div>
+        </div>
+
+        {/* Co-Patron */}
+        <div className="space-y-2">
+          <h3 className="flex items-center gap-4">
+            <span className="text-xl font-bold">
+              Co-Patrons
+            </span>{" "}
+            <div className="h-[1px] grow bg-black"></div>
+          </h3>
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2">
+            <OrganizerCard
+              organizer={organizingCommitte[3]}
+              smallScreen={true}
+            />
+            <OrganizerCard
+              organizer={organizingCommitte[4]}
+              smallScreen={true}
+            />
+            <OrganizerCard
+              organizer={organizingCommitte[5]}
+              smallScreen={true}
+            />
+            <OrganizerCard
+              organizer={organizingCommitte[6]}
+              smallScreen={true}
+            />
+            <OrganizerCard
+              organizer={organizingCommitte[7]}
               smallScreen={true}
             />
           </div>
@@ -99,11 +142,11 @@ export default function OrganizingCommitee() {
           </h3>
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2">
             <OrganizerCard
-              organizer={organizingCommitte[3]}
+              organizer={organizingCommitte[8]}
               smallScreen={true}
             />
             <OrganizerCard
-              organizer={organizingCommitte[4]}
+              organizer={organizingCommitte[9]}
               smallScreen={true}
             />
           </div>
@@ -117,11 +160,11 @@ export default function OrganizingCommitee() {
           </h3>
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2">
             <OrganizerCard
-              organizer={organizingCommitte[5]}
+              organizer={organizingCommitte[10]}
               smallScreen={true}
             />
             <OrganizerCard
-              organizer={organizingCommitte[6]}
+              organizer={organizingCommitte[11]}
               smallScreen={true}
             />
           </div>
@@ -130,28 +173,30 @@ export default function OrganizingCommitee() {
         {/* Joint Organizing Secretaries */}
         <div className="space-y-2">
           <h3 className="flex items-center gap-4">
-            <span className="text-xl font-bold">Joint Organizing Secretaries</span>{" "}
+            <span className="text-xl font-bold">
+              Joint Organizing Secretaries
+            </span>{" "}
             <div className="h-[1px] grow bg-black"></div>
           </h3>
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2">
             <OrganizerCard
-              organizer={organizingCommitte[7]}
+              organizer={organizingCommitte[12]}
               smallScreen={true}
             />
             <OrganizerCard
-              organizer={organizingCommitte[8]}
+              organizer={organizingCommitte[13]}
               smallScreen={true}
             />
             <OrganizerCard
-              organizer={organizingCommitte[9]}
+              organizer={organizingCommitte[14]}
               smallScreen={true}
             />
             <OrganizerCard
-              organizer={organizingCommitte[10]}
+              organizer={organizingCommitte[15]}
               smallScreen={true}
             />
             <OrganizerCard
-              organizer={organizingCommitte[11]}
+              organizer={organizingCommitte[16]}
               smallScreen={true}
             />
           </div>
@@ -165,7 +210,7 @@ export default function OrganizingCommitee() {
           </h3>
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2">
             <OrganizerCard
-              organizer={organizingCommitte[12]}
+              organizer={organizingCommitte[17]}
               smallScreen={true}
             />
           </div>

@@ -1,8 +1,11 @@
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-export default function SocialMedia({ hideOnSmallScreen = false, iconColor = "white" }) {
+export default function SocialMedia({
+  hideOnSmallScreen = false,
+  iconColor = "white",
+}) {
   return (
-    <div className={hideOnSmallScreen && "hidden md:block"}>
+    <div className={`${hideOnSmallScreen && "hidden md:block"}`}>
       <ul className="flex gap-4">
         <li>
           <a
