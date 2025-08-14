@@ -65,6 +65,8 @@ import Dr_Sohini_dey from "./peoples/Dr Sohini dey.jpeg";
 import Dr_Triveni_Dutt from "./peoples/Dr Triveni Dutt.jpeg";
 import Dr_Vishal_Chander from "./peoples/Dr Vishal Chander.jpeg";
 import Dr_YPS_Malik from "./peoples/Dr YPS Malik.jpeg";
+import Dr_S_Manoharan from "./peoples/Dr S Manoharan.jpg";
+import Dr_Thangavelu_A from "./peoples/Dr Thangavelu A.jpg";
 
 import Professor_Md_Tanvir_Rahman from "./peoples/Professor Md Tanvir Rahman.jpg";
 import Dr_Sayeh_EZZIKOURI from "./peoples/Dr Sayeh EZZIKOURI.jpg";
@@ -204,6 +206,8 @@ export const peoples = {
   Dr_Triveni_Dutt,
   Dr_Vishal_Chander,
   Dr_YPS_Malik,
+  Dr_S_Manoharan,
+  Dr_Thangavelu_A,
 
   Professor_Md_Tanvir_Rahman,
   Dr_Sayeh_EZZIKOURI,

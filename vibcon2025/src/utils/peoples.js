@@ -139,13 +139,13 @@ export const officeBearers = [
     role: "Vice-President",
   },
   {
-    image: null,
+    image: peoples.Dr_S_Manoharan,
     name: "Dr S Manoharan",
     position: "Prof. and Head, TANUVAS, Chennai",
     role: "Secretary",
   },
   {
-    image: null,
+    image: peoples.Dr_Thangavelu_A,
     name: "Dr A Thangavelu",
     position: "Head (Retd.), TANUVAS, Chennai",
     role: "Joint-Secretary",
@@ -176,12 +176,12 @@ export const speakers = [
     name: "Dr Sayeh EZZIKOURI",
     position: "",
   },
-  {
-    image: "",
-    name: "Dr. M. Nazmul Hoque",
-    position:
-      "Assistant Commissioner, Custom Excise and Vat. Sector:11, Uttara, Dhaka, Bangladesh",
-  },
+  // {
+  //   image: "",
+  //   name: "Dr. M. Nazmul Hoque",
+  //   position:
+  //     "Assistant Commissioner, Custom Excise and Vat. Sector:11, Uttara, Dhaka, Bangladesh",
+  // },
   {
     image: peoples.Dr_Gyanendra_Gongal,
     name: "Dr Gyanendra Gongal",
