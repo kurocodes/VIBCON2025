@@ -93,7 +93,7 @@ export const organizingCommitte = [
     role: "Joint Organizing Secretary",
   },
   {
-    image: peoples.Dr_Sameer_Shrivastava,
+    image: peoples.Dr_Saminathan_mani,
     name: "Dr. Saminathan M",
     position: "Sr Scientist, ICAR-IVRI, Mukteswar",
     role: "Joint Organizing Secretary",

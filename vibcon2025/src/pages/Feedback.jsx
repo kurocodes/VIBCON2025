@@ -3,7 +3,12 @@ import { useState, useEffect } from "react";
 import { toast, Bounce } from "react-toastify";
 
 export default function FeedbackForm() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isEnabled, setIsEnabled] = useState(false);
   const [countdown, setCountdown] = useState("");
@@ -37,21 +42,33 @@ export default function FeedbackForm() {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/submit-feedback`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/submit-feedback`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
       if (result.status === "success") {
-        toast.success("Feedback submitted!", { theme: "colored", transition: Bounce });
+        toast.success("Feedback submitted!", {
+          theme: "colored",
+          transition: Bounce,
+        });
         reset();
       } else {
-        toast.error("Failed to submit feedback!", { theme: "colored", transition: Bounce });
+        toast.error("Failed to submit feedback!", {
+          theme: "colored",
+          transition: Bounce,
+        });
       }
     } catch {
-      toast.error("Submission failed!", { theme: "colored", transition: Bounce });
+      toast.error("Submission failed!", {
+        theme: "colored",
+        transition: Bounce,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -67,25 +84,52 @@ export default function FeedbackForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* Name & Email */}
           <div>
-            <label className="block font-medium text-[var(--color-accent)]">Name *</label>
-            <input {...register("name", { required: "Name is required" })} className={inputFieldStyle} />
-            {errors.name && <p className="text-red-500">{errors.name.message}</p>}
+            <label className="block font-medium text-[var(--color-accent)]">
+              Name *
+            </label>
+            <input
+              {...register("name", { required: "Name is required" })}
+              className={inputFieldStyle}
+            />
+            {errors.name && (
+              <p className="text-red-500">{errors.name.message}</p>
+            )}
           </div>
 
           <div>
-            <label className="block font-medium text-[var(--color-accent)]">Email *</label>
-            <input type="email" {...register("email", { required: "Email is required" })} className={inputFieldStyle} />
-            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+            <label className="block font-medium text-[var(--color-accent)]">
+              Email *
+            </label>
+            <input
+              type="email"
+              {...register("email", { required: "Email is required" })}
+              className={inputFieldStyle}
+            />
+            {errors.email && (
+              <p className="text-red-500">{errors.email.message}</p>
+            )}
           </div>
 
           {/* Questions */}
           {[
             { q: "How did you hear about this conference?", name: "q1" },
-            { q: "Was the conference venue appropriate for the event? (Yes/No)", name: "q2" },
-            { q: "Rate the included technical sessions of the conference", name: "q3" },
-            { q: "Was the content of the oral presentations relevant? (Yes/No)", name: "q4" },
+            {
+              q: "Was the conference venue appropriate for the event? (Yes/No)",
+              name: "q2",
+            },
+            {
+              q: "Rate the included technical sessions of the conference",
+              name: "q3",
+            },
+            {
+              q: "Was the content of the oral presentations relevant? (Yes/No)",
+              name: "q4",
+            },
             { q: "Rate the quality of the speaker presentations", name: "q5" },
-            { q: "Were the poster presentations relevant? (Yes/No)", name: "q6" },
+            {
+              q: "Were the poster presentations relevant? (Yes/No)",
+              name: "q6",
+            },
             { q: "Rate the structure and format of sessions", name: "q7" },
             { q: "Satisfaction with interaction & engagement", name: "q8" },
             { q: "Satisfaction with catering & food options", name: "q9" },
@@ -93,15 +137,20 @@ export default function FeedbackForm() {
             { q: "Satisfaction with travel arrangements", name: "q11" },
             { q: "Rate the provided materials’ usefulness", name: "q12" },
             { q: "Rate your overall experience", name: "q13" },
-            { q: "Suggestions for improvement", name: "q14" }
+            { q: "Suggestions for improvement", name: "q14" },
           ].map((item, idx) => (
             <div key={idx}>
               <label className="block font-medium text-[var(--color-accent)]">
                 {item.q} *
               </label>
-              <textarea {...register(item.name, { required: "This field is required" })}
-                rows={2} className={inputFieldStyle}></textarea>
-              {errors[item.name] && <p className="text-red-500">{errors[item.name].message}</p>}
+              <textarea
+                {...register(item.name, { required: "This field is required" })}
+                rows={2}
+                className={inputFieldStyle}
+              ></textarea>
+              {errors[item.name] && (
+                <p className="text-red-500">{errors[item.name].message}</p>
+              )}
             </div>
           ))}
 
@@ -109,9 +158,16 @@ export default function FeedbackForm() {
           <button
             type="submit"
             disabled={!isEnabled || isSubmitting}
-            className={`px-6 py-2 rounded text-white ${!isEnabled || isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-[var(--color-primary)] hover:bg-[var(--color-accent)]"}`}>
+            className={`px-6 py-2 rounded text-white ${
+              !isEnabled || isSubmitting
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-[var(--color-primary)] hover:bg-[var(--color-accent)]"
+            }`}
+          >
             {isEnabled
-              ? (isSubmitting ? "Submitting..." : "Submit Feedback")
+              ? isSubmitting
+                ? "Submitting..."
+                : "Submit Feedback"
               : `Available in ${countdown}`}
           </button>
         </form>

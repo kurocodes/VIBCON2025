@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
 
 app.post("/submit-abstract", async (req, res) => {
   try {
+    // console.log(process.env.GOOGLE_SCRIPT_URL);
     const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -45,7 +46,6 @@ app.post("/submit-feedback", async (req, res) => {
     res.status(500).json({ status: "error", message: "Failed to submit" });
   }
 });
-
 
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
