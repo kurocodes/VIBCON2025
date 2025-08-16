@@ -74,7 +74,7 @@ export default function Hero({
             </h2>
             {!compact && (
               <h2 className="text-3xl sm:text-4xl font-extrabold mt-2">
-                Indian society of Veterinary Immunology <br /> & Biotechnology
+                Indian Society of Veterinary Immunology <br /> & Biotechnology
                 (ISVIB)
               </h2>
             )}
