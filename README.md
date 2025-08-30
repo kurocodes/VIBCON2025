@@ -1,12 +1,45 @@
-# React + Vite
+# VIBCON 2025 Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+VIBCON 2025 is the official website for the XXX Annual Convention of the Indian Society for Veterinary Immunology & Biotechnology (ISVIB), hosted by ICAR-IVRI Mukteswar.
 
-Currently, two official plugins are available:
+This premier international conference is themed:
+“Envisioning Livestock Production and Protection under the One Health Landscape.”
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The event aims to advance veterinary immunology and biotechnology for safeguarding animal health and productivity, bringing together scientists, researchers, academicians, veterinarians, policymakers, and industry professionals from across the globe—set in the serene and picturesque Himalayas.
 
-## Expanding the ESLint configuration
+## 🌐 Website Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The website serves as the central information hub for VIBCON 2025, providing:
+
+- Conference overview and theme
+- Scientific program details
+- Abstract submission portal
+- Registration information
+- Travel & Mukteshwar campus details
+- Contact and support options
+
+Additionally, it integrates abstract submission and feedback forms with Google Sheets for efficient data management.
+
+## ⚙️ Tech Stack
+
+- Frontend: React + Tailwind CSS
+- Backend: Node.js + Express.js
+- Forms Integration: Google Web App Script → Google Sheets
+- Deployment: (Frontend on Netlify, and backend on Render)
+
+## 📂 Features
+
+- 🖥️ Responsive and modern UI with Tailwind CSS
+- 📝 Abstract submission form with Google Sheets integration
+- 💬 Feedback form for attendees and participants
+- 📅 Detailed sections for Program, Events, and Travel
+- ✨ Highlighted “Why You Shouldn’t Miss This Event” and Registration CTAs
+
+## 📬 Feedback & Contribution
+
+This website is developed for VIBCON 2025 organizers and participants.
+If you find any issues or want to suggest improvements, feel free to open an issue or contribute via pull requests.
+
+## 📖 License
+
+This project is developed for academic and organizational purposes for VIBCON 2025. Please seek permission from the organizers before reuse or redistribution.
