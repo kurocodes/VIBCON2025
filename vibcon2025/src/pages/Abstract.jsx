@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { toast, Bounce } from "react-toastify";
 import { useState } from "react";
+import { BeatLoader } from "react-spinners";
 
 const inputFieldStyle =
   "w-full border border-[var(--color-accent)] p-2 rounded bg-white text-black outline-[var(--color-secondary)]";
@@ -13,9 +14,19 @@ export default function AbstractSubmission() {
     reset,
   } = useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSubmittingMsg, setShowSubmittingMsg] = useState(false);
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
+    setShowSubmittingMsg(true);
+
+    // Simulate form submission delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setShowSubmittingMsg(false);
+    toast.info("Your Abstract is being submitted!", {
+      theme: "colored",
+      transition: Bounce,
+    });
 
     try {
       const response = await fetch(
@@ -201,18 +212,25 @@ export default function AbstractSubmission() {
             )}
           </div>
 
-          {/* Submit */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`px-6 py-2 rounded text-white transition ${
-              isSubmitting
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-[var(--color-primary)] hover:bg-[var(--color-accent)]"
-            }`}
-          >
-            {isSubmitting ? "Submitting..." : "Submit Abstract"}
-          </button>
+          <div>
+            {/* Submit */}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`flex items-center justify-center w-45 h-10 px-6 py-2 rounded text-white transition ${
+                showSubmittingMsg
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-[var(--color-primary)] hover:bg-[var(--color-accent)]"
+              }`}
+            >
+              {/* {showSubmittingMsg ? "Submitting..." : "Submit Abstract"} */}
+              {showSubmittingMsg ? (
+                <BeatLoader color="#f4f4f2" />
+              ) : (
+                "Submit Abstract"
+              )}
+            </button>
+          </div>
         </form>
       </div>
     </div>
