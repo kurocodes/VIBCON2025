@@ -23,9 +23,12 @@ export default function AbstractSubmission() {
     // Simulate form submission delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
     setShowSubmittingMsg(false);
-    toast.info("Your Abstract is being submitted!", {
+    const submittedToastId = toast.info("Your Abstract is being submitted!", {
       theme: "colored",
       transition: Bounce,
+      autoClose: false,
+      closeButton: false,
+      draggable: false,
     });
 
     try {
@@ -39,6 +42,7 @@ export default function AbstractSubmission() {
       );
 
       const result = await response.json();
+      toast.dismiss(submittedToastId);
       if (result.status === "success") {
         reset();
         toast.success("Abstract submitted successfully!", {
