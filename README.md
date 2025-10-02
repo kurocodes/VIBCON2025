@@ -7,6 +7,10 @@ This premier international conference is themed:
 
 The event aims to advance veterinary immunology and biotechnology for safeguarding animal health and productivity, bringing together scientists, researchers, academicians, veterinarians, policymakers, and industry professionals from across the globe—set in the serene and picturesque Himalayas.
 
+### 🌐 Live Preview
+
+👉 [View Live Site](https://vibcon2025.com/)
+
 ## 🌐 Website Purpose
 
 The website serves as the central information hub for VIBCON 2025, providing:
