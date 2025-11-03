@@ -66,6 +66,12 @@ export default function Footer() {
               <NavLink to="/organizers">Organizers</NavLink>
             </li>
             <li className={linkStyle}>
+              <NavLink to="/speakers">Speakers</NavLink>
+            </li>
+            <li className={linkStyle}>
+              <NavLink to="/sponsers">Sponsers</NavLink>
+            </li>
+            <li className={linkStyle}>
               <NavLink to="/travel">Travel</NavLink>
             </li>
             <li className={linkStyle}>

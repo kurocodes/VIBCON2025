@@ -80,6 +80,16 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/speakers" className={getNavItemStyle}>
+              Speakers
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/sponsers" className={getNavItemStyle}>
+              Sponsers
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/travel" className={getNavItemStyle}>
               Travel
             </NavLink>
@@ -103,7 +113,7 @@ export default function Navbar() {
       </nav>
 
       {/* Social Media Links */}
-      <SocialMedia hideOnSmallScreen />
+      {/* <SocialMedia hideOnSmallScreen /> */}
 
       {/* Menu icon for small screens */}
       <div className="text-[var(--color-text)] lg:hidden">

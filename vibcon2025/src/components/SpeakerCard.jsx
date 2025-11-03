@@ -9,6 +9,8 @@ export default function SpeakerCard({ speaker }) {
         />
       </div>
       <span className="text-md font-semibold text-[var(--color-accent)]">{speaker.name}</span>
+      <br />
+      <span className="font-semibold text-sm">{speaker.designation}</span>
     </div>
   );
 }

@@ -74,6 +74,53 @@ import Dr_Gyanendra_Gongal from "./peoples/Dr Gyanendra Gongal.jpg";
 import Dr_Sital_Kaji_Shrestha from "./peoples/Dr Sital Kaji Shrestha.jpg";
 import Dr_Souvik_Ghosh from "./peoples/Dr Souvik Ghosh.jpg";
 
+import Dr_R_K_Singh from "./speakers/Dr R. K. Singh.png";
+import Dr_Praveen_Malik from "./speakers/Dr Praveen Malik.png";
+import Dr_B_R_Gulati from "./speakers/Dr B. R. Gulati.png";
+import Dr_R_P_Singh from "./speakers/Dr R. P. Singh.png";
+import Dr_B_Pattanaik from "./speakers/Dr B. Pattanaik.png";
+import Prof_Dr_A_K_Gahlot from "./speakers/Prof. (Dr) A. K. Gahlot.png";
+import Dr_Bimlesh_Mann from "./speakers/Dr Bimlesh Mann.png";
+import Dr_Ashok_Kumar from "./speakers/Dr Ashok Kumar.png";
+import Dr_Gaya_Prasad from "./speakers/Dr Gaya Prasad.png";
+import Dr_Suresh_S_Honnappagol from "./speakers/Dr Suresh S. Honnappagol.png";
+import Dr_Rajeev_Kaul from "./speakers/Dr Rajeev Kaul.png";
+import Dr_Minakshi_Prasad from "./speakers/Dr Minakshi Prasad.png";
+import Dr_V_Balamurugan from "./speakers/Dr V. Balamurugan.png";
+import Dr_Shrikrishna_Isloor from "./speakers/Dr Shrikrishna Isloor.png";
+import Dr_Manoj_Kumar from "./speakers/Dr Manoj Kumar.png";
+import Dr_Aruna_T_Kumar from "./speakers/Dr Aruna T. Kumar.png";
+import Dr_Sachinandan_De from "./speakers/Dr Sachinandan De.png";
+import Dr_Probodh_Borah from "./speakers/Dr Probodh Borah.png";
+
+import AllTof from "./sponsers/AllTof.png";
+import eppendorf from "./sponsers/appendorf.png";
+import Balaji_scientific_and_checmicals from "./sponsers/Balaji scientific and checmicals.png";
+import Biovet from "./sponsers/Biovet.png";
+import Brilliant_Bio_Pharma from "./sponsers/Brilliant Bio Pharma.png";
+import Brooke_India from "./sponsers/Brooke India.png";
+import DoBGI from "./sponsers/DoBGI.png";
+import DoST from "./sponsers/DoST.png";
+import ew_nutrition from "./sponsers/ew nutrition.png";
+import Faith from "./sponsers/Faith.png";
+import Hester from "./sponsers/Hester.png";
+import Himedia from "./sponsers/Himedia.png";
+import HIPRA from "./sponsers/HIPRA.png";
+import Huvepharma from "./sponsers/Huvepharma.png";
+import ibiz from "./sponsers/Ibiz resources.png";
+import ICAR from "./sponsers/ICAR.png";
+import ICMR from "./sponsers/ICMR.svg";
+import IML from "./sponsers/IML.png";
+import Indovax from "./sponsers/Indovax.png";
+import MSD from "./sponsers/MSD.png";
+import Nabard from "./sponsers/Nabard.png";
+import PFI from "./sponsers/PFI.png";
+import QIAGEN from "./sponsers/QIAGEN.png";
+import Takara from "./sponsers/Takara.png";
+import Venkys from "./sponsers/venkys.png";
+import Virbac from "./sponsers/Virbac.png";
+import Twomens from "./sponsers/Twomens.png";
+
 export const images = {
   isvib_logo,
   icar_logo,
@@ -215,3 +262,54 @@ export const peoples = {
   Dr_Sital_Kaji_Shrestha,
   Dr_Souvik_Ghosh,
 };
+
+export const speakers = {
+  Dr_R_K_Singh,
+  Dr_Praveen_Malik,
+  Dr_B_R_Gulati,
+  Dr_R_P_Singh,
+  Dr_B_Pattanaik,
+  Prof_Dr_A_K_Gahlot,
+  Dr_Bimlesh_Mann,
+  Dr_Ashok_Kumar,
+  Dr_Gaya_Prasad,
+  Dr_Suresh_S_Honnappagol,
+  Dr_Rajeev_Kaul,
+  Dr_Minakshi_Prasad,
+  Dr_V_Balamurugan,
+  Dr_Shrikrishna_Isloor,
+  Dr_Manoj_Kumar,
+  Dr_Aruna_T_Kumar,
+  Dr_Sachinandan_De,
+  Dr_Probodh_Borah,
+}
+
+export const sponserLogos = {
+  AllTof,
+  eppendorf,
+  Balaji_scientific_and_checmicals,
+  Biovet,
+  Brilliant_Bio_Pharma,
+  Brooke_India,
+  DoBGI,
+  DoST,
+  ew_nutrition,
+  Faith,
+  Hester,
+  Himedia,
+  HIPRA,
+  Huvepharma,
+  ibiz,
+  ICAR,
+  ICMR,
+  IML,
+  Indovax,
+  MSD,
+  Nabard,
+  PFI,
+  QIAGEN,
+  Takara,
+  Twomens,
+  Venkys,
+  Virbac,
+}

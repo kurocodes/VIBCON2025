@@ -58,6 +58,18 @@ export default function Sidebar() {
             className="text-[var(--color-primary)] hover:text-[var(--color-accent)]"
             onClick={() => setShowSidebar(false)}
           >
+            <NavLink to="/speakers">Speakers</NavLink>
+          </li>
+          <li
+            className="text-[var(--color-primary)] hover:text-[var(--color-accent)]"
+            onClick={() => setShowSidebar(false)}
+          >
+            <NavLink to="/sponsers">Sponsers</NavLink>
+          </li>
+          <li
+            className="text-[var(--color-primary)] hover:text-[var(--color-accent)]"
+            onClick={() => setShowSidebar(false)}
+          >
             <NavLink to="/travel">Travel</NavLink>
           </li>
           <li
