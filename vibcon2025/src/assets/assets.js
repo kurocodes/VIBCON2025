@@ -117,7 +117,7 @@ import Nabard from "./sponsers/Nabard.png";
 import PFI from "./sponsers/PFI.png";
 import QIAGEN from "./sponsers/QIAGEN.png";
 import Takara from "./sponsers/Takara.png";
-import Venkys from "./sponsers/venkys.png";
+import Venkys from "./sponsers/Venkys.png";
 import Virbac from "./sponsers/Virbac.png";
 import Twomens from "./sponsers/Twomens.png";
 
